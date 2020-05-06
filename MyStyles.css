@@ -1,0 +1,4 @@
+BODY {background-color:#ABCDEF}
+H1 {color-decoration:underline; color:#0D4B46;font-family:Times}
+A:link {text-decoration:underline; color:#003399}
+A:hover{text-decoration:underline; color:red}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic HTML Example</title>
+<script language="JavaScript">
+var timerID;
+var x = 0;
+var y = 0;
+function BeginAnimation()
+{
+//Continue animation for 100 milliseconds
+timerID = window.setInterval("ContinueAnimation()",100);
+}
+function ContinueAnimation()
+{
+  //Move the picture along the x axis to 40
+  x+=40;
+  FamilyPhoto.style.left = x + 'px';
+//Move the picture along the y axis to 16
+  y+=16;
+  FamilyPhoto.style.top = y + 'px';
+//Stop the timer when the animation has moved 1000 pixels
+  if(x>1000)
+  {
+  window.clearInterval(timerID);
+
+}
+
+}
+</script>
+</head>
+<body onload="BeginAnimation()" marginheight="0" topmargin="0" leftmargin="0">
+<img id="FamilyPhoto" style="position:absolute;top:0px;left:0px" src= "FamilyPhoto.jpg"
+</body>
+</html>
